@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Luxivo | Timeless Elegance</title>
+    <!-- Google Fonts & simple reset for consistent rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.4;
+            scroll-behavior: smooth;
+        }
+
+        /* container utility */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header & navigation */
+        .site-header {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #c7a252 0%, #b38b40 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2e2e2e;
+            transition: color 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #c7a252;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: default;
+            color: #2e2e2e;
+        }
+
+        /* hero section */
+        .hero {
+            margin: 2.5rem 0 3rem;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            background: #faf7f2;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px -8px rgba(0,0,0,0.05);
+        }
+
+        .hero-content {
+            flex: 1;
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-content .sub {
+            color: #c7a252;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            color: #1e1e1e;
+        }
+
+        .hero-content p {
+            color: #4a4a4a;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            max-width: 90%;
+        }
+
+        .btn-primary {
+            background: #1e1e1e;
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            width: fit-content;
+            font-weight: 600;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #c7a252;
+            color: #1e1e1e;
+        }
+
+        .hero-image {
+            flex: 1;
+            background: #e9e2d4;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* featured categories */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 4rem 0 2rem;
+            letter-spacing: -0.3px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: #6b6b6b;
+            margin-bottom: 2.5rem;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid #f3f3f3;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 28px -12px rgba(0,0,0,0.12);
+        }
+
+        .category-img {
+            width: 100%;
+            height: 220px;
+            background: #f5f0e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .category-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .category-card:hover .category-img img {
+            transform: scale(1.03);
+        }
+
+        .category-info {
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .category-info h3 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-info p {
+            color: #c7a252;
+            font-weight: 500;
+        }
+
+        /* featured products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 20px 28px -12px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            height: 280px;
+            background: #fcf9f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-details {
+            padding: 1.2rem 1rem 1.5rem;
+            text-align: center;
+        }
+
+        .product-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .product-price {
+            color: #c7a252;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #c7a252;
+            padding: 0.5rem 1.3rem;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #1e1e1e;
+            margin-top: 0.6rem;
+        }
+
+        .btn-outline:hover {
+            background: #c7a252;
+            border-color: #c7a252;
+            color: white;
+        }
+
+        /* value propositions */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            background: #faf7f2;
+            border-radius: 32px;
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .feature-item {
+            flex: 1;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            color: #5a5a5a;
+        }
+
+        /* newsletter */
+        .newsletter {
+            background: #1e1e1e;
+            border-radius: 32px;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+            margin: 4rem 0;
+        }
+
+        .newsletter h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter p {
+            margin-bottom: 1.8rem;
+            opacity: 0.8;
+        }
+
+        .news-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .news-form input {
+            padding: 0.8rem 1.2rem;
+            border-radius: 60px;
+            border: none;
+            width: 280px;
+            font-family: inherit;
+        }
+
+        .news-form button {
+            background: #c7a252;
+            border: none;
+            padding: 0 1.8rem;
+            border-radius: 60px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+
+        .news-form button:hover {
+            background: #dbb86b;
+        }
+
+        /* footer */
+        .footer {
+            border-top: 1px solid #ececec;
+            padding: 2.5rem 0 2rem;
+            font-size: 0.85rem;
+            color: #5e5e5e;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #1e1e1e;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-col p, .footer-col ul {
+            line-height: 1.6;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.4rem;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ececec;
+        }
+
+        @media (max-width: 780px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            .hero-content p {
+                max-width: 100%;
+            }
+            .hero-grid {
+                flex-direction: column;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+
+
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>Luxivo</h1>
+        </div>
+        <ul class="nav-links">
+         <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </ul>
+        <div class="header-icons">
+            <span class="icon-btn">🔍</span>
+            <span class="icon-btn">🛒</span>
+            <span class="icon-btn">👤</span>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <!-- Hero Section with working image from reliable placeholder + quality demo -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="sub">TIMELESS ELEGANCE</div>
+                    <h2>Luxury redefined.<br>Everyday sophistication.</h2>
+                    <p>Discover the perfect blend of modern design & artisan craftsmanship. Luxivo brings you curated collections that speak to your authentic style.</p>
+                    <button class="btn-primary" id="exploreBtn">Explore Collection →</button>
+                </div>
+                <div class="hero-image">
+                    <!-- working image: unsplash high-end fashion/luxury lifestyle -->
+                    <img src="https://images.pexels.com/photos/5777690/pexels-photo-5777690.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                         alt="Luxivo luxury fashion model" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/eadbc8/5e3a1f?text=Luxivo+Elegance';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <div class="section-title">Shop by Category</div>
+        <div class="section-sub">Curated edits for every moment</div>
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                         alt="Luxury handbags" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/e3d9cd/876b48?text=Handbags';">
+                </div>
+                <div class="category-info">
+                    <h3>Signature Bags</h3>
+                    <p>Shop Now →</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                         alt="Silk accessories" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/ebdfd0/a07448?text=Scarves';">
+                </div>
+                <div class="category-info">
+                    <h3>Silk Scarves</h3>
+                    <p>Shop Now →</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.pexels.com/photos/4370373/pexels-photo-4370373.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                         alt="Premium watches" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/cdc2b2/8b6243?text=Watches';">
+                </div>
+                <div class="category-info">
+                    <h3>Timepieces</h3>
+                    <p>Shop Now →</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                         alt="Home luxury" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/f2e9dc/a67c52?text=Home+Decor';">
+                </div>
+                <div class="category-info">
+                    <h3>Home Atelier</h3>
+                    <p>Shop Now →</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Products -->
+        <div class="section-title">Bestsellers</div>
+        <div class="section-sub">Most loved by our community</div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600&h=500&fit=crop" 
+                         alt="Luxivo tote bag" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x500/e5d9cb/aa7a48?text=The+Opus+Tote';">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">The Opus Tote</div>
+                    <div class="product-price">$490</div>
+                    <button class="btn-outline">Quick View</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.pexels.com/photos/1456705/pexels-photo-1456705.jpeg?auto=compress&cs=tinysrgb&w=600&h=500&fit=crop" 
+                         alt="Aether Watch" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x500/ccc0ae/b37a3e?text=Aether+Watch';">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Aether Chronograph</div>
+                    <div class="product-price">$1,250</div>
+                    <button class="btn-outline">Quick View</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.pexels.com/photos/7560943/pexels-photo-7560943.jpeg?auto=compress&cs=tinysrgb&w=600&h=500&fit=crop" 
+                         alt="Silk Twilly Scarf" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x500/e9ddcf/c28b56?text=Silk+Scarf';">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Cascade Silk Scarf</div>
+                    <div class="product-price">$210</div>
+                    <button class="btn-outline">Quick View</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.pexels.com/photos/5953812/pexels-photo-5953812.jpeg?auto=compress&cs=tinysrgb&w=600&h=500&fit=crop" 
+                         alt="Minimalist Leather Belt" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x500/e6d9ca/b87f48?text=Leather+Belt';">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Svelte Belt</div>
+                    <div class="product-price">$185</div>
+                    <button class="btn-outline">Quick View</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features row: working images not needed but nice icons -->
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon">✈️</div>
+                <h4>Free Express Shipping</h4>
+                <p>On orders over $300</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔄</div>
+                <h4>30-Day Returns</h4>
+                <p>Hassle-free experience</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <h4>Secure Payment</h4>
+                <p>SSL encrypted checkout</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎁</div>
+                <h4>Gift Wrapping</h4>
+                <p>Eco-luxe packaging</p>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <h3>Join the Luxivo Circle</h3>
+            <p>Be the first to experience new drops, exclusive offers & insider access.</p>
+            <div class="news-form">
+                <input type="email" placeholder="Your email address" id="newsEmail">
+                <button id="subscribeBtn">Subscribe →</button>
+            </div>
+            <p style="font-size: 0.7rem; margin-top: 1rem; opacity:0.7;">No spam, only elegance.</p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Luxivo</h4>
+                <p>Elevating everyday life through timeless design and sustainable luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li>New Arrivals</li>
+                    <li>Bestsellers</li>
+                    <li>Gift Cards</li>
+                    <li>Lookbook</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li>FAQs</li>
+                    <li>Shipping & Returns</li>
+                    <li>Size Guide</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Pinterest</li>
+                    <li>LinkedIn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Luxivo — Where luxury meets soul. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- simple interactive JS for demo alert (keeping UX friendly) -->
+<script>
+    // Ensure all interactive elements provide demo feedback
+    const exploreBtn = document.getElementById('exploreBtn');
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const newsInput = document.getElementById('newsEmail');
+    
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', () => {
+            alert('✨ Welcome to Luxivo — Discover our full collection of handcrafted luxury pieces.');
+        });
+    }
+    
+    if (subscribeBtn) {
+        subscribeBtn.addEventListener('click', () => {
+            const email = newsInput.value.trim();
+            if (email && email.includes('@') && email.includes('.')) {
+                alert(`Thank you ${email}! You are now part of the Luxivo inner circle.`);
+                newsInput.value = '';
+            } else {
+                alert('Please enter a valid email address to receive luxury updates.');
+            }
+        });
+    }
+    
+    // Add to all Quick View buttons a simple interactive message
+    const quickViewBtns = document.querySelectorAll('.btn-outline');
+    quickViewBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productCard = btn.closest('.product-card');
+            let productName = 'this piece';
+            if (productCard) {
+                const titleElem = productCard.querySelector('.product-title');
+                if (titleElem) productName = titleElem.innerText;
+            }
+            alert(`✨ ${productName} — Luxivo’s finest. More details coming soon.`);
+        });
+    });
+    
+    // category cards also add gentle navigation info
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const categoryTitle = card.querySelector('h3')?.innerText || 'category';
+            alert(`Explore the ${categoryTitle} collection at Luxivo.`);
+        });
+        card.style.cursor = 'pointer';
+    });
+    
+    // handle any broken image fallback already covered but extra safety
+    const allImages = document.querySelectorAll('img');
+    allImages.forEach(img => {
+        img.addEventListener('error', function() {
+            if (!this.dataset.fallbackAttempted) {
+                this.dataset.fallbackAttempted = 'true';
+                const defaultImg = 'https://placehold.co/800x600/f0ebe3/b38b40?text=Luxivo';
+                this.src = defaultImg;
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Luxivo | Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header matching brand */
+        .site-header {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #c7a252 0%, #b38b40 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2e2e2e;
+            transition: color 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #c7a252;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: default;
+            color: #2e2e2e;
+        }
+
+        /* page header */
+        .page-header {
+            background: #faf7f2;
+            padding: 3rem 0 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 0 0 32px 32px;
+        }
+
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1e1e1e;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-sub {
+            color: #5a5a5a;
+            font-size: 1rem;
+        }
+
+        .btn-back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid #c7a252;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #1e1e1e;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .btn-back-home:hover {
+            background: #c7a252;
+            color: white;
+            border-color: #c7a252;
+        }
+
+        /* privacy layout */
+        .privacy-wrapper {
+            display: flex;
+            gap: 3rem;
+            margin: 2rem 0 5rem;
+            flex-wrap: wrap;
+        }
+
+        .privacy-sidebar {
+            flex: 1;
+            min-width: 240px;
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            background: #fefcf8;
+            border-radius: 24px;
+            padding: 1.5rem;
+            border: 1px solid #f0eade;
+        }
+
+        .privacy-sidebar h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e1e1e;
+        }
+
+        .sidebar-nav {
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 0.8rem;
+        }
+
+        .sidebar-nav a {
+            text-decoration: none;
+            color: #4b4b4b;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            display: inline-block;
+        }
+
+        .sidebar-nav a:hover {
+            color: #c7a252;
+        }
+
+        .privacy-content {
+            flex: 3;
+            background: white;
+            border-radius: 28px;
+            padding: 2rem 2rem 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f2efe8;
+        }
+
+        .privacy-section {
+            margin-bottom: 2.5rem;
+            scroll-margin-top: 90px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e1e1e;
+            border-left: 4px solid #c7a252;
+            padding-left: 1rem;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.6rem;
+            color: #2c2c2c;
+        }
+
+        .privacy-section p {
+            margin-bottom: 1rem;
+            color: #3a3a3a;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+            color: #3a3a3a;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-box {
+            background: #fef6e8;
+            padding: 1rem 1.5rem;
+            border-radius: 18px;
+            border-left: 3px solid #c7a252;
+            margin: 1.2rem 0;
+        }
+
+        .data-badge {
+            display: inline-block;
+            background: #e9e2d4;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #6b4c2c;
+            margin-right: 0.5rem;
+        }
+
+        .last-updated {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ececec;
+            text-align: right;
+        }
+
+        /* footer */
+        .footer {
+            border-top: 1px solid #ececec;
+            padding: 2.5rem 0 2rem;
+            font-size: 0.85rem;
+            color: #5e5e5e;
+            background: #ffffff;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #1e1e1e;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.4rem;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ececec;
+        }
+
+        @media (max-width: 780px) {
+            .privacy-wrapper {
+                flex-direction: column;
+            }
+            .privacy-sidebar {
+                position: relative;
+                top: 0;
+            }
+            .page-title {
+                font-size: 2rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .cookie-consent-banner {
+            background: #1e1e1e;
+            color: white;
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .cookie-text {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        .cookie-btn {
+            background: #c7a252;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+        .cookie-btn:hover {
+            background: #dbb86b;
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="#"><h1>Luxivo</h1></a>
+        </div>
+        <ul class="nav-links">
+            <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </ul>
+        <div class="header-icons">
+            <span class="icon-btn">🔍</span>
+            <span class="icon-btn">🛒</span>
+            <span class="icon-btn">👤</span>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <a href="#" class="btn-back-home" id="backHomeBtn">← Back to Homepage</a>
+            <h1 class="page-title">Privacy Policy</h1>
+            <div class="page-sub">Your trust is our greatest luxury. How we protect and honor your data.</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- interactive cookie notice (simulated consent) -->
+        <div id="cookieNotice" class="cookie-consent-banner" style="display: flex;">
+            <div class="cookie-text">🍪 Luxivo uses cookies to enhance your experience and analyze site traffic. By continuing, you consent to our use of cookies.</div>
+            <button id="acceptCookiesBtn" class="cookie-btn">Accept & Continue</button>
+        </div>
+
+        <div class="privacy-wrapper">
+            <!-- Sidebar navigation -->
+            <aside class="privacy-sidebar">
+                <h4>Privacy topics</h4>
+                <ul class="sidebar-nav">
+                    <li><a href="#intro">1. Our Commitment</a></li>
+                    <li><a href="#info-collect">2. Information We Collect</a></li>
+                    <li><a href="#usage">3. How We Use Your Data</a></li>
+                    <li><a href="#sharing">4. Sharing & Disclosure</a></li>
+                    <li><a href="#cookies">5. Cookies & Tracking</a></li>
+                    <li><a href="#security">6. Data Security</a></li>
+                    <li><a href="#rights">7. Your Privacy Rights</a></li>
+                    <li><a href="#children">8. Children’s Privacy</a></li>
+                    <li><a href="#international">9. International Transfers</a></li>
+                    <li><a href="#retention">10. Data Retention</a></li>
+                    <li><a href="#changes-policy">11. Policy Updates</a></li>
+                    <li><a href="#contact-privacy">12. Contact Us</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main privacy content -->
+            <div class="privacy-content">
+                <div id="intro" class="privacy-section">
+                    <h2>1. Our Commitment to Privacy</h2>
+                    <p>At Luxivo ("we," "us," "our"), privacy is not an afterthought—it is the foundation of our relationship with you. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you visit our website <strong>www.luxivo.com</strong> (the "Site"), make a purchase, or interact with our services.</p>
+                    <div class="highlight-box">
+                        ✨ <strong>Luxivo Promise:</strong> We never sell your personal data to third parties. Your information is used solely to elevate your shopping experience.
+                    </div>
+                </div>
+
+                <div id="info-collect" class="privacy-section">
+                    <h2>2. Information We Collect</h2>
+                    <p>We collect several types of information to provide and improve our services:</p>
+                    <ul>
+                        <li><span class="data-badge">Personal Identifiers</span> Name, email address, shipping/billing address, phone number.</li>
+                        <li><span class="data-badge">Payment Details</span> Credit card information (processed via secure PCI-DSS compliant gateways; we do not store full card details).</li>
+                        <li><span class="data-badge">Account Credentials</span> Username, password, and preferences when you create a Luxivo account.</li>
+                        <li><span class="data-badge">Transaction History</span> Products purchased, return information, and wishlist items.</li>
+                        <li><span class="data-badge">Technical Data</span> IP address, browser type, device identifiers, and browsing behavior via analytics.</li>
+                        <li><span class="data-badge">Communications</span> Records of your correspondence with our concierge team.</li>
+                    </ul>
+                    <p>We collect this data directly from you (e.g., when you register, place an order, or subscribe to our newsletter) and automatically through cookies and similar technologies.</p>
+                </div>
+
+                <div id="usage" class="privacy-section">
+                    <h2>3. How We Use Your Information</h2>
+                    <p>Luxivo uses your personal data for legitimate business purposes, including:</p>
+                    <ul>
+                        <li>Processing and fulfilling orders, including shipping and payment confirmation.</li>
+                        <li>Communicating order updates, delivery status, and customer support inquiries.</li>
+                        <li>Personalizing your shopping experience and recommending products based on preferences.</li>
+                        <li>Sending marketing communications (only with your consent, which you may withdraw at any time).</li>
+                        <li>Improving our Site, troubleshooting, and preventing fraud.</li>
+                        <li>Complying with legal obligations and enforcing our Terms & Conditions.</li>
+                    </ul>
+                </div>
+
+                <div id="sharing" class="privacy-section">
+                    <h2>4. Sharing & Disclosure</h2>
+                    <p>We do not sell or rent your personal data. However, we may share information with trusted third parties that help us operate our business:</p>
+                    <ul>
+                        <li><strong>Service Providers:</strong> Payment processors (Stripe, PayPal), shipping carriers (DHL, FedEx), IT hosting, and email platforms.</li>
+                        <li><strong>Legal Compliance:</strong> If required by law, court order, or governmental regulation.</li>
+                        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your data may be transferred with notice.</li>
+                    </ul>
+                    <p>All third parties are contractually obligated to protect your data and use it only for specified purposes.</p>
+                </div>
+
+                <div id="cookies" class="privacy-section">
+                    <h2>5. Cookies & Tracking Technologies</h2>
+                    <p>Luxivo uses cookies, web beacons, and similar technologies to enhance functionality, analyze trends, and remember your preferences. You can manage cookie settings via your browser, but disabling essential cookies may affect site features.</p>
+                    <p>We use both session cookies (expire after closing your browser) and persistent cookies (remain until deleted). Third-party analytics (e.g., Google Analytics) help us understand user behavior in an anonymized manner.</p>
+                    <div class="highlight-box">
+                        🍪 <strong>Your Choice:</strong> By using our Site, you consent to cookie placement. You may adjust your browser to refuse cookies, but some interactive features may be limited.
+                    </div>
+                </div>
+
+                <div id="security" class="privacy-section">
+                    <h2>6. Data Security</h2>
+                    <p>We implement industry-standard security measures including SSL encryption, firewalls, and restricted access to personal data. However, no internet transmission is 100% secure. We encourage you to protect your account credentials and notify us immediately of any suspected breach.</p>
+                    <p>Luxivo is PCI DSS compliant, ensuring that payment data is handled with the highest level of security.</p>
+                </div>
+
+                <div id="rights" class="privacy-section">
+                    <h2>7. Your Privacy Rights</h2>
+                    <p>Depending on your location (including GDPR for EU residents and CCPA for California residents), you may have the following rights:</p>
+                    <ul>
+                        <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+                        <li><strong>Correction:</strong> Update inaccurate or incomplete information.</li>
+                        <li><strong>Deletion:</strong> Request erasure of your data, subject to legal exceptions.</li>
+                        <li><strong>Opt-out:</strong> Unsubscribe from marketing emails via the "unsubscribe" link or contact us.</li>
+                        <li><strong>Data Portability:</strong> Receive a machine-readable copy of your data.</li>
+                    </ul>
+                    <p>To exercise any of these rights, please email <strong>privacy@luxivo.com</strong>. We will respond within 30 days.</p>
+                </div>
+
+                <div id="children" class="privacy-section">
+                    <h2>8. Children’s Privacy</h2>
+                    <p>Luxivo does not knowingly collect personal information from children under the age of 13. If you believe a child has provided us with data, please contact us, and we will promptly delete it.</p>
+                </div>
+
+                <div id="international" class="privacy-section">
+                    <h2>9. International Data Transfers</h2>
+                    <p>Luxivo is based in the United States, and your data may be processed in countries with different data protection laws. When transferring data internationally, we rely on standard contractual clauses or adequacy decisions to ensure an equivalent level of protection.</p>
+                </div>
+
+                <div id="retention" class="privacy-section">
+                    <h2>10. Data Retention</h2>
+                    <p>We retain your personal information as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce agreements. Typically, customer data is retained for 7 years after the last interaction, after which it is anonymized or deleted.</p>
+                </div>
+
+                <div id="changes-policy" class="privacy-section">
+                    <h2>11. Updates to This Privacy Policy</h2>
+                    <p>We may revise this Privacy Policy from time to time. Material changes will be notified via email (if you have an account) or a prominent notice on our Site. The "Last Updated" date at the bottom indicates when the policy was revised. Your continued use of Luxivo after changes signifies acceptance.</p>
+                </div>
+
+                <div id="contact-privacy" class="privacy-section">
+                    <h2>12. Contact Our Privacy Team</h2>
+                    <p>If you have questions, concerns, or requests regarding this Privacy Policy or your data, please reach out:</p>
+                    <ul>
+                        <li><strong>Privacy Officer Email:</strong> privacy@luxivo.com</li>
+                        <li><strong>Customer Support:</strong> concierge@luxivo.com</li>
+                        <li><strong>Mail:</strong> Luxivo Privacy Department, 450 Fifth Avenue, Suite 1200, New York, NY 10018, USA</li>
+                    </ul>
+                    <p>For EU residents, you also have the right to lodge a complaint with your local supervisory authority.</p>
+                </div>
+
+                <div class="last-updated">
+                    Last Updated: June 12, 2026 | Version 3.0 (GDPR & CCPA compliant)
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Luxivo</h4>
+                <p>Elevating everyday life through timeless design and sustainable luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li>New Arrivals</li>
+                    <li>Bestsellers</li>
+                    <li>Gift Cards</li>
+                    <li>Lookbook</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li>FAQs</li>
+                    <li>Shipping & Returns</li>
+                    <li>Size Guide</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#" style="text-decoration: none; color:#5e5e5e;">Privacy Policy</a></li>
+                    <li><a href="#" style="text-decoration: none; color:#5e5e5e;">Terms & Conditions</a></li>
+                    <li>Cookie Preferences</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Luxivo — Where luxury meets soul. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Smooth scroll for sidebar links
+    const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const offset = 90;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({
+                    top: elementPosition - offset,
+                    behavior: 'smooth'
+                });
+                history.pushState(null, null, `#${targetId}`);
+            }
+        });
+    });
+
+    // Back to homepage button
+    const backBtn = document.getElementById('backHomeBtn');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('✨ Returning to Luxivo — Your privacy is always respected.');
+            window.location.href = '#';
+        });
+    }
+
+    // Cookie consent banner
+    const cookieNotice = document.getElementById('cookieNotice');
+    const acceptBtn = document.getElementById('acceptCookiesBtn');
+    
+    // Check localStorage for cookie consent
+    if (localStorage.getItem('luxivoCookieConsent') === 'accepted') {
+        cookieNotice.style.display = 'none';
+    }
+    
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('luxivoCookieConsent', 'accepted');
+            cookieNotice.style.display = 'none';
+            // optional subtle notification
+            const msg = document.createElement('div');
+            msg.innerText = '🍪 Cookie preferences saved. Thank you.';
+            msg.style.position = 'fixed';
+            msg.style.bottom = '20px';
+            msg.style.right = '20px';
+            msg.style.backgroundColor = '#1e1e1e';
+            msg.style.color = '#fff';
+            msg.style.padding = '8px 16px';
+            msg.style.borderRadius = '40px';
+            msg.style.fontSize = '0.8rem';
+            msg.style.zIndex = '1000';
+            document.body.appendChild(msg);
+            setTimeout(() => msg.remove(), 2500);
+        });
+    }
+
+    // hash scroll on load
+    window.addEventListener('DOMContentLoaded', () => {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            const target = document.getElementById(hash);
+            if (target) {
+                setTimeout(() => {
+                    const offset = 90;
+                    const pos = target.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({ top: pos - offset, behavior: 'smooth' });
+                }, 200);
+            }
+        }
+    });
+    
+    // footer legal links simple alert for demo consistency
+    const legalLinks = document.querySelectorAll('.footer-col ul a');
+    legalLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if(link.innerText.includes('Privacy') || link.innerText.includes('Terms')) {
+                e.preventDefault();
+                alert(`🔒 Luxivo • ${link.innerText} page. We value transparency.`);
+            }
+        });
+    });
+</script>
+</body>
+</html>

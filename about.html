@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Luxivo | About Us — The Art of Elegance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header */
+        .site-header {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #c7a252 0%, #b38b40 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2e2e2e;
+            transition: color 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #c7a252;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: default;
+            color: #2e2e2e;
+        }
+
+        /* page header */
+        .page-header {
+            background: #faf7f2;
+            padding: 3rem 0 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 0 32px 32px;
+        }
+
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1e1e1e;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-sub {
+            color: #5a5a5a;
+            font-size: 1rem;
+            max-width: 600px;
+        }
+
+        .btn-back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid #c7a252;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #1e1e1e;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .btn-back-home:hover {
+            background: #c7a252;
+            color: white;
+            border-color: #c7a252;
+        }
+
+        /* about hero story */
+        .story-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0 4rem;
+        }
+        .story-text {
+            flex: 1;
+        }
+        .story-text h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.3px;
+        }
+        .story-text p {
+            color: #3a3a3a;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .story-image {
+            flex: 1;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+        }
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .story-image:hover img {
+            transform: scale(1.02);
+        }
+
+        /* values grid */
+        .values-section {
+            background: #fefcf8;
+            border-radius: 48px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+        }
+        .section-badge {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            color: #c7a252;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .section-title-center {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+        .value-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 28px;
+            transition: all 0.2s;
+            border: 1px solid #f0eade;
+        }
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 25px -12px rgba(0,0,0,0.08);
+        }
+        .value-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+        .value-card h3 {
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        .value-card p {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+        }
+
+        /* team / craftsmanship */
+        .craft-section {
+            margin: 4rem 0;
+        }
+        .craft-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+        .craft-img {
+            flex: 1.2;
+            border-radius: 28px;
+            overflow: hidden;
+        }
+        .craft-img img {
+            width: 100%;
+            display: block;
+        }
+        .craft-quote {
+            flex: 1;
+            background: #faf7f2;
+            padding: 2rem;
+            border-radius: 32px;
+        }
+        .craft-quote blockquote {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+            font-style: normal;
+            color: #1e1e1e;
+        }
+        .craft-quote figcaption {
+            font-size: 0.9rem;
+            color: #c7a252;
+            font-weight: 600;
+        }
+
+        /* stats */
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            background: #1e1e1e;
+            border-radius: 32px;
+            padding: 2.5rem 2rem;
+            color: white;
+            margin: 4rem 0;
+            text-align: center;
+        }
+        .stat-item {
+            flex: 1;
+        }
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #c7a252;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 0.3rem;
+        }
+
+        /* newsletter */
+        .newsletter {
+            background: #faf7f2;
+            border-radius: 32px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        .newsletter h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .newsletter p {
+            margin-bottom: 1.8rem;
+            color: #4a4a4a;
+        }
+        .news-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .news-form input {
+            padding: 0.8rem 1.2rem;
+            border-radius: 60px;
+            border: 1px solid #e2dcd0;
+            width: 280px;
+            font-family: inherit;
+        }
+        .news-form button {
+            background: #c7a252;
+            border: none;
+            padding: 0 1.8rem;
+            border-radius: 60px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+        .news-form button:hover {
+            background: #b38b40;
+            color: white;
+        }
+
+        /* footer */
+        .footer {
+            border-top: 1px solid #ececec;
+            padding: 2.5rem 0 2rem;
+            font-size: 0.85rem;
+            color: #5e5e5e;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-col h4 {
+            color: #1e1e1e;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 0.4rem;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ececec;
+        }
+
+        @media (max-width: 780px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .page-title {
+                font-size: 2rem;
+            }
+            .story-section {
+                flex-direction: column;
+            }
+            .stats-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="#"><h1>Luxivo</h1></a>
+        </div>
+        <ul class="nav-links">
+            <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </ul>
+        <div class="header-icons">
+            <span class="icon-btn">🔍</span>
+            <span class="icon-btn">🛒</span>
+            <span class="icon-btn">👤</span>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <a href="#" class="btn-back-home" id="backHomeBtn">← Back to Homepage</a>
+            <h1 class="page-title">The Luxivo Story</h1>
+            <div class="page-sub">Where timeless design meets modern conscience — a new era of conscious luxury.</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- hero story block with working images -->
+        <div class="story-section">
+            <div class="story-text">
+                <h2>Founded in the spirit of artistry</h2>
+                <p>Luxivo was born from a desire to reimagine luxury — not as excess, but as intention. In 2018, our founder Elena Voss set out to create pieces that honor heritage craftsmanship while embracing contemporary silhouettes. Each Luxivo piece is a quiet statement: refined, enduring, and deeply personal.</p>
+                <p>We believe that true elegance is found in the details. From ethically sourced materials to partnerships with family-owned ateliers in Italy and France, every stitch tells a story. Our name, "Luxivo," blends luminosity and life — a philosophy that guides everything we create.</p>
+                <p>Today, Luxivo is a global destination for those who seek beauty without compromise: sustainable, inclusive, and endlessly inspiring.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.pexels.com/photos/4380976/pexels-photo-4380976.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                     alt="Luxivo artisan at work" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x600/f5efe6/b38b40?text=Luxivo+Atelier';">
+            </div>
+        </div>
+
+        <!-- core values -->
+        <div class="values-section">
+            <div class="section-badge">Our ethos</div>
+            <div class="section-title-center">Principles that guide us</div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🕊️</div>
+                    <h3>Conscious Craft</h3>
+                    <p>We prioritize low-impact materials, zero-waste patterns, and ethical production.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h3>Timeless Design</h3>
+                    <p>No seasons, no fast fashion — only enduring pieces meant to be cherished.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Radical Transparency</h3>
+                    <p>From sourcing to pricing, we invite you to see how your luxury is made.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Community First</h3>
+                    <p>We uplift artisan communities and support women-led enterprises globally.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Craftsmanship & quote section -->
+        <div class="craft-section">
+            <div class="craft-inner">
+                <div class="craft-img">
+                    <img src="https://images.pexels.com/photos/5602530/pexels-photo-5602530.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                         alt="Luxivo craftsmanship details" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/e7dfd4/b77e44?text=Artisan+Heritage';">
+                </div>
+                <div class="craft-quote">
+                    <blockquote>“Luxury is not about price — it is about the feeling of wearing something that was made with purpose. At Luxivo, we honor the hands behind each creation.”</blockquote>
+                    <figcaption>— Elena Voss, Founder & Creative Director</figcaption>
+                    <p style="margin-top: 1.2rem; font-size: 0.9rem;">Our ateliers in Florence and Lyon bring generations of expertise, blending old-world techniques with modern innovation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- impact stats (visual numbers) -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Ethically sourced materials</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Partner artisan workshops</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4,200+</div>
+                <div class="stat-label">Trees planted through our program</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1%</div>
+                <div class="stat-label">of profits to arts education</div>
+            </div>
+        </div>
+
+        <!-- sustainability highlight -->
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 3rem 0; background: #ffffff; border-radius: 32px; border: 1px solid #f0eade; padding: 2rem;">
+            <div style="flex: 1;">
+                <span style="font-size: 2.5rem;">♻️</span>
+                <h3 style="margin: 0.8rem 0 0.5rem;">Circular by design</h3>
+                <p>Our 'Luxivo Renew' program gives new life to pre-loved pieces. We offer complimentary repairs and upcycling for any Luxivo item — because the most sustainable garment is the one you never replace.</p>
+            </div>
+            <div style="flex: 1;">
+                <span style="font-size: 2.5rem;">📦</span>
+                <h3 style="margin: 0.8rem 0 0.5rem;">Plastic‑free packaging</h3>
+                <p>Every order arrives in 100% recycled and compostable materials. Our signature dust bags are made from organic cotton and natural dyes.</p>
+            </div>
+            <div style="flex: 1;">
+                <span style="font-size: 2.5rem;">🌱</span>
+                <h3 style="margin: 0.8rem 0 0.5rem;">Carbon‑neutral shipping</h3>
+                <p>We offset all emissions from deliveries through verified climate initiatives.</p>
+            </div>
+        </div>
+
+        <!-- team / meet the makers (light gallery) -->
+        <div class="section-title-center" style="margin-top: 2rem;">Meet the hearts behind Luxivo</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.8rem; margin: 2rem 0 3rem;">
+            <div style="text-align: center;">
+                <img src="https://images.pexels.com/photos/5876695/pexels-photo-5876695.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
+                     style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 0.8rem;" 
+                     alt="Founder" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x300/f1e8dd/b37a44?text=Elena';">
+                <h4 style="font-weight: 600;">Elena Voss</h4>
+                <p style="font-size: 0.8rem; color: #c7a252;">Founder</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
+                     style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 0.8rem;" 
+                     alt="Creative Director" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x300/efe4d8/b27b45?text=Marc';">
+                <h4 style="font-weight: 600;">Marc Lefèvre</h4>
+                <p style="font-size: 0.8rem; color: #c7a252;">Creative Director</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="https://images.pexels.com/photos/3863785/pexels-photo-3863785.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
+                     style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 0.8rem;" 
+                     alt="Sustainability lead" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x300/eadbcb/bb8045?text=Sophia';">
+                <h4 style="font-weight: 600;">Sophia Chen</h4>
+                <p style="font-size: 0.8rem; color: #c7a252;">Sustainability Officer</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
+                     style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 0.8rem;" 
+                     alt="Head Atelier" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x300/f7eee3/b58248?text=Giuseppe';">
+                <h4 style="font-weight: 600;">Giuseppe Rossi</h4>
+                <p style="font-size: 0.8rem; color: #c7a252;">Master Leather Artisan</p>
+            </div>
+        </div>
+
+        <!-- newsletter signup -->
+        <div class="newsletter">
+            <h3>Join the Luxivo Circle</h3>
+            <p>Be the first to receive stories from our ateliers, exclusive previews, and sustainable luxury insights.</p>
+            <div class="news-form">
+                <input type="email" placeholder="Your email address" id="aboutNewsEmail">
+                <button id="aboutSubscribeBtn">Subscribe →</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Luxivo</h4>
+                <p>Elevating everyday life through timeless design and sustainable luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li>New Arrivals</li>
+                    <li>Bestsellers</li>
+                    <li>Gift Cards</li>
+                    <li>Lookbook</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li>FAQs</li>
+                    <li>Shipping & Returns</li>
+                    <li>Size Guide</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Our Journey</h4>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Pinterest</li>
+                    <li>LinkedIn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Luxivo — Where luxury meets soul. All rights reserved. | <a href="#" style="color:#c7a252; text-decoration: none;">Privacy & Terms</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // back to homepage interactive
+    const backBtn = document.getElementById('backHomeBtn');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('✨ Welcome back to Luxivo — Timeless elegance awaits.');
+            window.location.href = '#';
+        });
+    }
+
+    // newsletter signup
+    const subBtn = document.getElementById('aboutSubscribeBtn');
+    const emailInput = document.getElementById('aboutNewsEmail');
+    if (subBtn) {
+        subBtn.addEventListener('click', () => {
+            const email = emailInput.value.trim();
+            if (email && email.includes('@') && email.includes('.')) {
+                alert(`Thank you ${email}! You are now part of the Luxivo inner circle.`);
+                emailInput.value = '';
+            } else {
+                alert('Please enter a valid email address to receive our stories.');
+            }
+        });
+    }
+
+    // any img fallback safety
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            if (!this.dataset.fallback) {
+                this.dataset.fallback = 'true';
+                this.src = 'https://placehold.co/800x600/f2ebe0/b68b48?text=Luxivo';
+            }
+        });
+    });
+</script>
+</body>
+</html>
